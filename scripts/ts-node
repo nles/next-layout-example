@@ -1,0 +1,7 @@
+#!/bin/bash
+set -e
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+cd $SCRIPT_DIR
+cd ..
+
+TS_NODE_PROJECT='./tsconfig.commonjs.json' ./node_modules/.bin/ts-node ${@:1}
